@@ -13,9 +13,9 @@ app.use(express.static("public"));
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({ model: "models/gemini-2.5-flash" });
 
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Gemini AI App is running" });
-});
+// app.get("/", (req, res) => {
+//   res.status(200).json({ message: "Gemini AI App is running" });
+// });
 
 app.post("/api/chat", async (req, res) => {
   try {
